@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>离职这件事，值得认真准备一次</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.8;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .article-wrapper {
+    max-width: 680px;
+    margin: 0 auto;
+    background: #fff;
+    min-height: 100vh;
+  }
+
+  /* ===== HEADER ===== */
+  .header {
+    background: linear-gradient(150deg, #f8f7fb 0%, #f0ecf8 100%);
+    padding: 60px 28px 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd6ee;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 25% 75%, rgba(140,100,220,0.06) 0%, transparent 50%),
+                radial-gradient(circle at 75% 25%, rgba(180,150,240,0.05) 0%, transparent 45%);
+    pointer-events: none;
+  }
+  .header-tag {
+    display: inline-block;
+    background: rgba(100,70,180,0.07);
+    color: #6650a4;
+    font-size: 12px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    border: 1px solid rgba(100,70,180,0.14);
+  }
+  .header h1 {
+    color: #1e1630;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+  .header-desc {
+    color: #7868a0;
+    font-size: 14px;
+    line-height: 2;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  /* ===== CONTENT AREA ===== */
+  .content {
+    padding: 0 24px 40px;
+  }
+
+  /* ===== SECTION HEADER (大分割) ===== */
+  .section-header {
+    display: flex;
+    align-items: center;
+    margin: 40px 0 24px;
+    padding-top: 10px;
+  }
+  .section-header .num {
+    min-width: 40px;
+    width: auto;
+    padding: 0 8px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+    margin-right: 14px;
+  }
+  .section-header .num.p1 { background: linear-gradient(135deg, #FF6B6B, #ee5a24); }
+  .section-header .num.p2 { background: linear-gradient(135deg, #f0932b, #e58e26); }
+  .section-header .num.p3 { background: linear-gradient(135deg, #6c5ce7, #a29bfe); }
+  .section-header .num.p4 { background: linear-gradient(135deg, #00b894, #00cec9); }
+  .section-header .num.p5 { background: linear-gradient(135deg, #e17055, #d63031); }
+  .section-header .num.p6 { background: linear-gradient(135deg, #636e72, #2d3436); }
+  .section-header h2 {
+    font-size: 19px;
+    font-weight: 700;
+    color: #1a1a2e;
+    line-height: 1.4;
+  }
+  .section-header .subtitle {
+    font-size: 13px;
+    color: #777;
+    font-weight: 400;
+    margin-left: 4px;
+  }
+
+  /* ===== CHAPTER TITLE ===== */
+  .chapter {
+    margin: 32px 0 20px;
+    padding: 16px 20px;
+    background: #fafafa;
+    border-radius: 12px;
+    border-left: 4px solid;
+    position: relative;
+  }
+  .chapter.c-orange { border-left-color: #FF6B6B; }
+  .chapter.c-blue { border-left-color: #0984e3; }
+  .chapter.c-green { border-left-color: #00b894; }
+  .chapter.c-purple { border-left-color: #6c5ce7; }
+  .chapter.c-red { border-left-color: #d63031; }
+  .chapter.c-teal { border-left-color: #00cec9; }
+  .chapter.c-pink { border-left-color: #e84393; }
+  .chapter h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .chapter h3 .ch-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    min-width: 36px;
+    padding: 0 6px;
+    border-radius: 6px;
+    font-size: 11px;
+    color: #fff;
+    flex-shrink: 0;
+    letter-spacing: -0.5px;
+  }
+  /* Section 1: 离职前能薅的羊毛 - 暖橙 */
+  .ch-num.n1, .ch-num.n2, .ch-num.n3, .ch-num.n4, .ch-num.n5, .ch-num.n6, .ch-num.n7 { background: #FF6B6B; }
+  /* Section 2: 离职前两周 - 橙色 */
+  .ch-num.n8, .ch-num.n9, .ch-num.n10 { background: #e58e26; }
+  /* Section 3: 离职当天 - 紫色 */
+  .ch-num.n11 { background: #6c5ce7; }
+  /* Section 4: 离职后财务 - 绿色 */
+  .ch-num.n12, .ch-num.n13, .ch-num.n14, .ch-num.n15 { background: #00b894; }
+  /* Section 5: 被裁了 - 红色 */
+  .ch-num.n16 { background: #d63031; }
+  /* Section 6: 收尾 - 灰蓝 */
+  .ch-num.n17, .ch-num.n18 { background: #636e72; }
+  .chapter .ch-desc {
+    font-size: 13px;
+    color: #777;
+    margin-top: 2px;
+  }
+
+  /* ===== SUBSECTION ===== */
+  .subsection {
+    margin: 20px 0 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2d3436;
+    padding-left: 12px;
+    border-left: 3px solid #ddd;
+  }
+
+  /* ===== PARAGRAPH ===== */
+  p {
+    margin: 10px 0;
+    color: #444;
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+  /* ===== TIP BOX (引用框) ===== */
+  .tip-box {
+    margin: 16px 0;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .tip-box.info {
+    background: #f0f4ff;
+    border-left: 3px solid #0984e3;
+    color: #2d3748;
+  }
+  .tip-box.warn {
+    background: #fff8e1;
+    border-left: 3px solid #f0932b;
+    color: #5d4e37;
+  }
+  .tip-box.danger {
+    background: #fff0f0;
+    border-left: 3px solid #d63031;
+    color: #4a2020;
+  }
+  .tip-box.success {
+    background: #f0fff4;
+    border-left: 3px solid #00b894;
+    color: #1a4030;
+  }
+  .tip-box .tip-icon {
+    font-weight: 700;
+    margin-right: 6px;
+  }
+  .tip-box strong {
+    color: inherit;
+  }
+
+  /* ===== CARD (特色卡片) ===== */
+  .card {
+    margin: 16px 0;
+    padding: 16px 18px;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .card-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* ===== TABLE ===== */
+  .table-wrapper {
+    margin: 14px 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 10px;
+    border: 1px solid #eee;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  thead th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #333;
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 2px solid #eee;
+    white-space: nowrap;
+  }
+  tbody td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #555;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: #fafbfc; }
+  .highlight { color: #e74c3c; font-weight: 700; }
+  .tag {
+    display: inline-block;
+    background: #fff3cd;
+    color: #856404;
+    font-size: 11px;
+    padding: 1px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  .tag-hot {
+    background: #ffe0e0;
+    color: #c0392b;
+  }
+
+  /* ===== LIST ===== */
+  ul, ol {
+    margin: 10px 0;
+    padding-left: 20px;
+  }
+  li {
+    margin: 6px 0;
+    color: #444;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  li strong {
+    color: #1a1a2e;
+  }
+
+  /* ===== CHECKLIST ===== */
+  .checklist {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+  }
+  .checklist li {
+    padding: 10px 14px;
+    margin: 6px 0;
+    background: #f8f9fa;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #444;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.7;
+  }
+  .checklist li::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+  .checklist li strong {
+    color: #e74c3c;
+  }
+
+  /* ===== FEATURE CARDS GRID ===== */
+  .feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 14px 0;
+  }
+  .feature-card {
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    background: #fff;
+    transition: all 0.2s;
+    cursor: default;
+  }
+  .feature-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transform: translateY(-1px);
+  }
+  .feature-card .fc-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 6px;
+  }
+  .feature-card .fc-desc {
+    font-size: 12px;
+    color: #888;
+    line-height: 1.7;
+  }
+
+  /* ===== NUMBERED STEP ===== */
+  .step {
+    display: flex;
+    align-items: flex-start;
+    margin: 14px 0;
+    gap: 14px;
+  }
+  .step-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #636e72, #475569);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .step-content {
+    flex: 1;
+    font-size: 14px;
+    color: #444;
+    line-height: 1.8;
+  }
+  .step-content strong {
+    color: #1a1a2e;
+    display: block;
+    margin-bottom: 4px;
+    font-size: 15px;
+  }
+
+  /* ===== LINK BOX ===== */
+  .link-box {
+    margin: 14px 0;
+    padding: 12px 16px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.8;
+  }
+  .link-box a {
+    color: #0984e3;
+    text-decoration: none;
+    word-break: break-all;
+  }
+  .link-box a:hover {
+    text-decoration: underline;
+  }
+  .link-box .link-title {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+  }
+
+  /* ===== DIVIDER ===== */
+  .divider {
+    height: 1px;
+    background: #eee;
+    margin: 32px 0;
+  }
+
+  /* ===== GLOSSARY / KEY VALUE ===== */
+  .kv-list {
+    margin: 12px 0;
+  }
+  .kv-item {
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+    font-size: 14px;
+  }
+  .kv-item:last-child { border-bottom: none; }
+  .kv-key {
+    width: 100px;
+    color: #888;
+    flex-shrink: 0;
+    font-weight: 500;
+  }
+  .kv-val {
+    flex: 1;
+    color: #333;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    background: #1a1a2e;
+    color: rgba(255,255,255,0.7);
+    padding: 40px 28px;
+    text-align: center;
+  }
+  .footer-text {
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 20px;
+    color: rgba(255,255,255,0.8);
+  }
+  .footer-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .footer-contact {
+    background: rgba(255,255,255,0.08);
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(4px);
+  }
+  .footer-contact strong {
+    color: rgba(255,255,255,0.9);
+    display: block;
+    margin-bottom: 2px;
+    font-size: 13px;
+  }
+
+  /* ===== ENDING ===== */
+  .ending {
+    text-align: center;
+    padding: 50px 28px;
+    background: linear-gradient(150deg, #f8f7fb 0%, #f0ecf8 100%);
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid #ddd6ee;
+  }
+  .ending::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle at 70% 30%, rgba(140,100,220,0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .ending p {
+    color: #7868a0;
+    font-size: 15px;
+    line-height: 2;
+  }
+  .ending .big {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 16px 0;
+    color: #1e1630;
+  }
+  .ending .bye {
+    font-size: 22px;
+    margin-top: 16px;
+    opacity: 0.5;
+    color: #6650a4;
+  }
+
+  /* ===== NAV INDEX ===== */
+  .nav-index {
+    margin: 28px 0;
+    padding: 20px;
+    background: #f4f5f7;
+    border-radius: 14px;
+    border: 1px solid #e2e4e8;
+  }
+  }
+  .nav-index .ni-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .nav-group {
+    margin-bottom: 12px;
+  }
+  .nav-group:last-child { margin-bottom: 0; }
+  .nav-group-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #888;
+    margin-bottom: 6px;
+    padding-left: 2px;
+  }
+  .nav-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .nav-tag {
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    color: #555;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    text-decoration: none;
+    transition: all 0.15s ease;
+    cursor: pointer;
+  }
+  .nav-tag:hover {
+    background: #475569;
+    color: #fff;
+    border-color: #475569;
+  }
+  /* highlight animation for scrolled-to chapter */
+  .chapter.highlight-flash {
+    animation: flashHighlight 1.5s ease;
+  }
+  @keyframes flashHighlight {
+    0% { background: #fff3e0; }
+    100% { background: #fafafa; }
+  }
+
+  /* ===== ADVANTAGE CARDS (香港身份 四香) ===== */
+  .adv-card {
+    margin: 14px 0;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .adv-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px;
+    height: 100%;
+  }
+  .adv-card.a1::before { background: #FF6B6B; }
+  .adv-card.a2::before { background: #f0932b; }
+  .adv-card.a3::before { background: #00b894; }
+  .adv-card.a4::before { background: #0984e3; }
+  .adv-card .adv-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+    padding-left: 8px;
+  }
+  .adv-card ul {
+    margin: 4px 0;
+    padding-left: 28px;
+  }
+  .adv-card li {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.8;
+    margin: 3px 0;
+  }
+
+  /* ===== IN-LINE LINK ===== */
+  a.ref-link {
+    color: #0984e3;
+    text-decoration: none;
+    border-bottom: 1px dashed #0984e3;
+    word-break: break-all;
+  }
+  a.ref-link:hover { color: #0652DD; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 400px) {
+    .header h1 { font-size: 22px; }
+    .feature-grid { grid-template-columns: 1fr; }
+    .content { padding: 0 16px 30px; }
+    .header { padding: 40px 20px 36px; }
+  }
+
+  /* ===== REDUCED MOTION ===== */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="article-wrapper">
+
+  <!-- ========== HEADER ========== -->
+  <div class="header">
+    <div class="header-tag">阿里 / 蚂蚁 · 离职必读</div>
+    <h1>离职这件事，<br>值得认真准备一次</h1>
+    <div class="header-desc">
+      这不是一份恐慌指南，是一份「把自己的事办好」的清单。<br>
+      在阿里/蚂蚁工作这些年，积累了不少资源和权益——<br>
+      有些只有在职时才能拿到，有些离职后处理起来会麻烦很多。<br>
+      提前做好准备，好好告别，好好出发。
+    </div>
+  </div>
+
+  <div class="content">
+
+    <!-- ========== NAV INDEX ========== -->
+    <div class="nav-index">
+      <div class="ni-title">&#128203; 快速导航</div>
+      
+      <div class="nav-group">
+        <div class="nav-group-label">🏃 离职前（越早越好）</div>
+        <div class="nav-tags">
+          <a href="#ch1" class="nav-tag">信用贷款</a>
+          <a href="#ch2" class="nav-tag">境外银行卡</a>
+          <a href="#ch3" class="nav-tag">港美股开户</a>
+          <a href="#ch4" class="nav-tag">香港保险</a>
+          <a href="#ch5" class="nav-tag">香港身份</a>
+          <a href="#ch6" class="nav-tag">签证</a>
+          <a href="#ch7" class="nav-tag">福利薅羊毛</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">📝 离职前准备（最后1-2周）</div>
+        <div class="nav-tags">
+          <a href="#ch8" class="nav-tag">注册个人钉</a>
+          <a href="#ch9" class="nav-tag">文件备份</a>
+          <a href="#ch10" class="nav-tag">信息清理</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">🚪 离职当天</div>
+        <div class="nav-tags">
+          <a href="#ch11" class="nav-tag">资产归还</a>
+          <a href="#ch11" class="nav-tag">钉钉改名</a>
+          <a href="#ch11" class="nav-tag">离职证明</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">💰 离职后财务</div>
+        <div class="nav-tags">
+          <a href="#ch12" class="nav-tag">工资结算</a>
+          <a href="#ch13" class="nav-tag">五险一金</a>
+          <a href="#ch14" class="nav-tag">商业保险</a>
+          <a href="#ch15" class="nav-tag">技能补贴</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">⚖️ 被裁了怎么办</div>
+        <div class="nav-tags">
+          <a href="#ch16" class="nav-tag">补偿规则</a>
+          <a href="#ch16" class="nav-tag">劳动仲裁</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ========================================== -->
+    <!-- 第一部分：离职前能薅的羊毛 -->
+    <!-- ========================================== -->
+    <div class="section-header" id="sec1">
+      <div class="num p1">一</div>
+      <div>
+        <h2>离职前能薅的羊毛</h2>
+        <div class="subtitle">这部分是价值最高的，很多权益只有在职状态才能办到</div>
+      </div>
+    </div>
+
+    <!-- 一、信用贷款 -->
+    <div class="chapter c-orange" id="ch1">
+      <h3><span class="ch-num n1">1.1</span>信用贷款 · 在职时办最值</h3>
+      <div class="ch-desc">大厂在职，征信加持，银行争着给低利率</div>
+    </div>
+
+    <p>大厂在职，征信加持，银行争着给低利率。离职后再想办？利率贵、额度小、甚至直接拒批。不是让你借钱花，是给自己留一条备用通道：<strong>急用时随借随还，不用不收费</strong>。</p>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="fc-title">&#128197; 期限建议</div>
+        <div class="fc-desc">优先选 <strong>5年期</strong>，其次 3年期，1年期慎选</div>
+      </div>
+      <div class="feature-card">
+        <div class="fc-title">&#9888;&#65039; 注意坑</div>
+        <div class="fc-desc">有些银行标称3年，但每年审核单位信息，离职后第二年就断了</div>
+      </div>
+      <div class="feature-card">
+        <div class="fc-title">&#128179; 数量</div>
+        <div class="fc-desc">一般可同时办 3-5 家，现在监管有所放松</div>
+      </div>
+      <div class="feature-card">
+        <div class="fc-title">&#128200; 利率</div>
+        <div class="fc-desc">2025.4月起银监会规定不得低于 <strong>3.0%</strong>，目前全国统一</div>
+      </div>
+    </div>
+
+    <div class="subsection">推荐银行（杭州）</div>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th>银行</th><th>额度</th><th>利率</th><th>期限</th><th>备注</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>萧山农商银行</strong> <span class="tag tag-hot">&#11088;</span></td><td>50-100万</td><td>3.0%</td><td>5年</td><td>最推荐</td></tr>
+          <tr><td><strong>杭州联合银行</strong> <span class="tag tag-hot">&#11088;</span></td><td>50万</td><td>3.0%</td><td>5年</td><td>5年后还本</td></tr>
+          <tr><td>南京银行</td><td>50-100万</td><td>3.0%</td><td>受信7年</td><td>每次借用1年</td></tr>
+          <tr><td>中信银行</td><td>50万</td><td>3.0%</td><td>授信7年</td><td>每次借用1年</td></tr>
+          <tr><td>北京银行（杭州）</td><td>50万</td><td>3.0%</td><td>3年</td><td>—</td></tr>
+          <tr><td>招商银行</td><td>30-50万</td><td>3.0%</td><td>1-7年</td><td>—</td></tr>
+          <tr><td>宁波银行</td><td>50-80万</td><td>3.0%</td><td>1-3年</td><td>—</td></tr>
+          <tr><td>民生银行（杭州）</td><td>50万</td><td>3.0%</td><td>授信3年</td><td>—</td></tr>
+          <tr><td>金华银行（杭州）</td><td>50万</td><td>3.0%</td><td>授信3年</td><td>—</td></tr>
+          <tr><td><strong>交通银行</strong></td><td>100万</td><td>3.0%</td><td>—</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="subsection">推荐银行（北京）</div>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>银行</th><th>额度</th><th>利率</th><th>期限</th></tr></thead>
+        <tbody>
+          <tr><td>北京银行（北京）</td><td>50万</td><td>3.0%</td><td>授信3年</td></tr>
+          <tr><td>民生银行（北京）</td><td>30万</td><td>3.0%</td><td>授信3年</td></tr>
+          <tr><td>华夏银行（北京）</td><td>30万</td><td>3.0%</td><td>授信3年</td></tr>
+          <tr><td><strong>盛京银行</strong></td><td>100万</td><td>3.0%</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="subsection">推荐银行（上海）</div>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>银行</th><th>额度</th><th>利率</th><th>期限</th></tr></thead>
+        <tbody>
+          <tr><td>民生银行（上海）</td><td>30-50万</td><td>3.0%</td><td>授信3年</td></tr>
+          <tr><td>浦发银行（上海）</td><td>20-50万</td><td>3.0%</td><td>—</td></tr>
+          <tr><td>宁波银行（上海）</td><td>50-80万</td><td>3.0%</td><td>授信3-5年</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+<div class="divider"></div>
+
+    <!-- 二、境外银行卡 -->
+    <div class="chapter c-blue" id="ch2">
+      <h3><span class="ch-num n2">1.2</span>境外银行卡 · 在职更容易过审</h3>
+      <div class="ch-desc">香港银行账户，全球资产配置的第一步</div>
+    </div>
+
+    <p>随着经济和全球趋势的变化，越来越多的朋友有境外投资理财、资产配置、保险配置、跨境支付等需求，开个香港银行账户是内地人的最优选择。香港银行账户还可用于境外收款，用内地银行账户基本无法收大额，小额收多了也会被限制。而香港银行账户没上述限制，可以正常使用。</p>
+
+    <div class="tip-box warn">
+      <span class="tip-icon">&#9888;&#65039;</span><strong>目前大陆开港卡要么有存款门槛，要么需亲赴香港，在职状态身份认证容易很多。</strong>
+    </div>
+
+    <div class="subsection">极简开户指引</div>
+    <p>港澳通行证（有效期≥6个月）+ 内地身份证 + 入境小白条/出入境记录 + 须开好漫游接收短信验证码。可能还需要：地址证明、投资证明、收入流水。</p>
+
+    <div class="step">
+      <div class="step-num">A</div>
+      <div class="step-content">
+        <strong>不到香港</strong>
+        内地见证开户（汇丰/渣打/恒生，50万门槛）
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">B</div>
+      <div class="step-content">
+        <strong>人到香港</strong>
+        可以开的银行很多，建议汇丰/中银+众安/蚂蚁，招商金葵花客户也可以内地先申请招商永隆开户（赴港激活）
+      </div>
+    </div>
+
+    <div class="tip-box info">
+      <span class="tip-icon">&#128197;</span><strong>2026年变化：</strong><br>
+      1. 中银开户收紧，线上申请通过率低，建议提前预约线下<br>
+      2. 汇丰One卡26年新开户需要满足1万港币存款，否则有管理费
+    </div>
+
+    <div class="subsection">推荐银行</div>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>银行</th><th>亮点</th><th>能否内地开</th></tr></thead>
+        <tbody>
+          <tr><td><strong>汇丰银行</strong> <span class="tag tag-hot">&#11088;</span></td><td>寰宇账户 + 汇丰跨境汇款，0成本跨境转账</td><td>&#9989;</td></tr>
+          <tr><td><strong>中银香港</strong> <span class="tag tag-hot">&#11088;</span></td><td>内地中银和香港中银互转免费</td><td>&#9989;</td></tr>
+          <tr><td>渣打银行</td><td>隐私性好、定存利率较高</td><td>&#9989;</td></tr>
+          <tr><td>招商永隆</td><td>审核通过率高，可内地先申请再赴港激活</td><td>&#9989;（预审）</td></tr>
+          <tr><td>众安银行</td><td>羊毛活动多，App 功能接近内地银行</td><td>线上</td></tr>
+          <tr><td>恒生银行</td><td>最多同时开 4 人（家人同行）</td><td>&#9989;</td></tr>
+          <tr><td>天星银行</td><td>与富途银证互转，资金回国方便</td><td>线上</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tip-box success">
+      <span class="tip-icon">&#128161;</span><strong>建议：</strong>优先开汇丰/中银/众安；担心审核不通过可先在内地申请招商永隆预审，赴港后线下激活。
+    </div>
+
+    <div class="link-box">
+      <div class="link-title">&#128218; 延伸阅读</div>
+      <a href="https://alidocs.dingtalk.com/i/nodes/Exel2BLV5zd4zbBGtLRQBzR9Jgk9rpMq">香港银行开户</a> — 7 家银行对比 + 线上开户攻略<br>
+      <a href="https://alidocs.dingtalk.com/i/nodes/9bN7RYPWdMBlMmYvcyv1an0pVZd1wyK0">银行定存利率统计</a> — 每月更新最新定存利率<br>
+      <a href="https://alidocs.dingtalk.com/i/nodes/GZLxjv9VGq93qOBrH4pxXzMY86EDybno">用好港卡-使用指南</a> — 外汇知识 + 跨境转账实操
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 三、港美股券商开户 -->
+    <div class="chapter c-green" id="ch3">
+      <h3><span class="ch-num n3">1.3</span>港美股券商开户</h3>
+      <div class="ch-desc">配置全球资产，从开一个证券账户开始</div>
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>券商</th><th>亮点</th></tr></thead>
+        <tbody>
+          <tr><td><strong>复星证券（香港）</strong> <span class="tag tag-hot">&#11088;</span></td><td>开户入金2万港币，获500港币 + 100元红包</td></tr>
+          <tr><td>盈立证券（香港）</td><td>无需复杂证明，直接开，可转发给亲友</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="subsection">复星证券开户</div>
+    <p>复星国际证券是复星国际集团（港股代码：00656.HK）旗下全资子公司，持有香港证监会1、2、4、6、9类牌照。</p>
+    <div class="link-box">
+      <a href="https://h5.fotechwealth.com/pages/startAccount.html?channel=030007&aeCode=B2&invitationCode=XMRXYP&langType=zhCn">点此3分钟完成开户</a>（邀请码：XMRXYP）<br>
+      <a href="https://alidocs.dingtalk.com/i/nodes/l6Pm2Db8D4K3401XIYbe0D578xLq0Ee4?utm_scene=team_space">操作教程</a>
+    </div>
+
+    <div class="subsection">盈立证券开户</div>
+    <p>目前长桥、富途、老虎开户都需要提供境外身份证明，盈立只需要身份证就可以开户，支持美股、期权、港股、港股打新等交易。</p>
+    <div class="link-box">
+      <a href="https://alidocs.dingtalk.com/i/nodes/QPGYqjpJYrbgrQplCRyyKo5R8akx1Z5N">盈立证券开户教程</a>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 四、香港保险 -->
+    <div class="chapter c-purple" id="ch4">
+      <h3><span class="ch-num n4">1.4</span>香港保险 · 在职高收入身份更易通过核保</h3>
+      <div class="ch-desc">在职时核保更宽松，离职后审核更严</div>
+    </div>
+
+    <p>2024年内地访客赴港投保 <strong class="highlight">628亿港元</strong>，仅次于2016年巅峰期（727亿），2025上半年已达319亿，市场热度持续回升。</p>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="fc-title">&#128200; 利率下行</div>
+        <div class="fc-desc">存款利率从2022年起连续多次下调，5年期定存利率已跌破2%</div>
+      </div>
+      <div class="feature-card">
+        <div class="fc-title">&#127968; 房地产低迷</div>
+        <div class="fc-desc">房价下跌趋势未止，非标固收领域频频爆雷</div>
+      </div>
+      <div class="feature-card">
+        <div class="fc-title">&#128201; A股波动</div>
+        <div class="fc-desc">牛短熊长，长期收益不理想</div>
+      </div>
+      <div class="feature-card">
+        <div class="fc-title">&#127760; 资产配置</div>
+        <div class="fc-desc">中产以上客户急需保本、分散风险的投资渠道</div>
+      </div>
+    </div>
+
+    <div class="subsection">香港储蓄险的核心优势</div>
+    <p>香港储蓄险本质上是一项<strong>可转换多元货币的保本基金</strong>，功能已超脱传统保险：</p>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>优势</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td><strong>保本 + 增值</strong></td><td>保证现金价值 + 非保证分红，长期复利增长</td></tr>
+          <tr><td><strong>多元货币配置</strong></td><td>支持美元、港元、英镑等多种货币，对冲单一货币风险</td></tr>
+          <tr><td><strong>全球资产分散</strong></td><td>依托国际资管平台（如霸菱资管），投资全球优质资产</td></tr>
+          <tr><td><strong>抵御通胀</strong></td><td>长期年化回报可达 6%-8%，有效对抗通胀</td></tr>
+          <tr><td><strong>财富传承</strong></td><td>可指定受益人，实现跨代财富传承</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="subsection">互联网巨头为何重金下注？</div>
+    <ul>
+      <li><strong>马云</strong>：通过云锋基金收购万通保险亚洲60%股权，万通80%+资产配置固收类，长期现金价值实现率稳定在100%</li>
+      <li><strong>腾讯</strong>：联合高瓴资本成立富卫人寿，推出纯线上品牌 Blue，偿付能力充足率超500%</li>
+    </ul>
+
+    <div class="tip-box success">
+      <span class="tip-icon">&#128161;</span><strong>建议：</strong>在职时高收入身份更容易通过核保，离职后核保审核更严。如需配置香港保险，建议在职期间完成。
+    </div>
+
+    <div class="link-box">
+      <div class="link-title">&#128218; 延伸阅读</div>
+      <a href="https://alidocs.dingtalk.com/i/nodes/LeBq413JAwdzw31jHYpGqOAzWDOnGvpb">抢滩香港保险！腾讯、阿里为何重金下注？</a><br>
+      <a href="https://alidocs.dingtalk.com/i/nodes/1R7q3QmWeeo7ex39iBvb0r6pWxkXOEP2">配置香港储蓄险的意义</a>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 五、香港身份 -->
+    <div class="chapter c-pink" id="ch5">
+      <h3><span class="ch-num n5">1.5</span>香港身份 · 在职时办最容易</h3>
+      <div class="ch-desc">7年转永居，在职时稳定收入是申请的重要条件</div>
+    </div>
+
+    <div class="adv-card a1">
+      <div class="adv-title">&#127891; 第一香：职业发展</div>
+      <ul>
+        <li>香港几乎没有年龄歧视，70岁仍可正常工作</li>
+        <li>IT 人才尤其受欢迎（香港金融发达但 IT 相对薄弱）</li>
+        <li>持香港身份可在港工作，享受国际化的职场环境</li>
+      </ul>
+    </div>
+    <div class="adv-card a2">
+      <div class="adv-title">&#128218; 第二香：教育红利</div>
+      <ul>
+        <li>15年免费公立教育（幼儿园到高中），中英文双语教学</li>
+        <li>DSE考试申请香港八大高校，港籍录取率 70%-75%</li>
+        <li>DSE 成绩可申请内地 132 所高校（含清北），或华侨生联考一本线 400 分即可入读名校</li>
+      </ul>
+    </div>
+    <div class="adv-card a3">
+      <div class="adv-title">&#128176; 第三香：税务优势</div>
+      <ul>
+        <li>香港税制简单，薪俸税最高 <strong>15%</strong>（内地最高 45%）</li>
+        <li>无增值税、无遗产税、无资本利得税</li>
+        <li>企业利得税仅 8.25%-16.5%</li>
+      </ul>
+    </div>
+    <div class="adv-card a4">
+      <div class="adv-title">&#9992;&#65039; 第四香：生活便利</div>
+      <ul>
+        <li>香港护照免签/落地签 171 个国家和地区</li>
+        <li>全球资产配置更自由，资金进出不受外汇管制</li>
+        <li>医疗体系发达，公立医院费用低廉</li>
+      </ul>
+    </div>
+
+    <div class="subsection">适合什么人？</div>
+    <ul>
+      <li>有子女教育规划的家庭（绕开高考内卷的核心通道）</li>
+      <li>有全球资产配置需求的高净值人群</li>
+      <li>IT 从业者等港府紧缺人才</li>
+      <li>计划拓展海外职业发展的人</li>
+    </ul>
+
+    <div class="tip-box warn">
+      <span class="tip-icon">&#9888;&#65039;</span><strong>注意：</strong>获取香港身份需长期规划（通常 7 年转永居），不是短期红利。在职时稳定的工作和纳税收入是申请的重要条件，离职后材料获取难度大增，有需要务必提前办理。
+    </div>
+
+    <div class="link-box">
+      <div class="link-title">&#128218; 延伸阅读</div>
+      <a href="https://alidocs.dingtalk.com/i/nodes/1zknDm0WRaZ3adDySn74oz9n8BQEx5rG">香港身份四大香，但我劝你想清楚</a><br>
+      <a href="https://alidocs.dingtalk.com/i/nodes/R4GpnMqJzGoMG3eyIgZzEba48Ke0xjE3">香港身份申请 & 续签攻略</a><br>
+      <a href="https://alidocs.dingtalk.com/i/nodes/14dA3GK8gjo5jyxgF70qvZBvJ9ekBD76">香港身份互助交流</a>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 六、签证 -->
+    <div class="chapter c-red" id="ch6">
+      <h3><span class="ch-num n6">1.6</span>签证 · 在职大厂容易出长签</h3>
+      <div class="ch-desc">在职身份是签证审批的加分项</div>
+    </div>
+
+    <div class="subsection">美国签证（10年多次）</div>
+    <p>在职阿里，出 10 年签概率很高，强烈建议在职时办。</p>
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <strong>填写 DS-160 表格</strong>
+        信息量很大，填完基本等于把自己人生回顾了一遍。需要：护照首页 + 5.1cm×5.1cm 电子照片。<br>
+        网址：<a href="https://ceac.state.gov/GenNIV/Default.aspx" class="ref-link">ceac.state.gov</a>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <strong>预约面签</strong>（等待周期通常 1-2 个月）
+        材料主要证明：在国内有稳定的工作、人际关系，不会滞留。不用找中介，完全可以自办。<br>
+        预约网址：<a href="https://www.ustraveldocs.com/cn/zh/" class="ref-link">ustraveldocs.com</a>
+      </div>
+    </div>
+
+    <div class="tip-box info">
+      <span class="tip-icon">&#128172;</span><strong>面签小贴士：</strong>必问「去美国做什么」「打算待多久」——回答要具体清晰。带上曾去过美国的朋友一起去，加分项。当天面签即知结果，护照约 3-10 工作日寄回。
+    </div>
+
+    <div class="link-box">
+      <a href="https://alidocs.dingtalk.com/i/nodes/6LeBq413JALyNGPmh4gjGGqBVDOnGvpb">详细攻略文档</a>
+    </div>
+
+    <div class="subsection">日本签证（5年多次）</div>
+    <p>收入证明够高，直接可以出5年签。条件满足以下<strong>三选一</strong>即可：</p>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>条件</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td>&#9312; 纳税证明</td><td>近12个月个人所得税8万以上；可用「个人所得税」APP查</td></tr>
+          <tr><td>&#9313; 工资流水</td><td>月收入4万以上；额外提供纳税证明</td></tr>
+          <tr><td>&#9314; 大额存款</td><td>近一年50万+ 收入进账 + 本人名下50万以上存款（冻结3个月）</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tip-box warn">
+      <span class="tip-icon">&#9888;&#65039;</span>日本签证目前必须通过旅行社/中介办理。如工资由关联公司发放，需在 MY HR 开具关联公司证明。
+    </div>
+
+    <div class="subsection">护照注意事项</div>
+    <ul>
+      <li>快过期的护照不利于签证，及时换领</li>
+      <li>建议提前电话咨询名额，或早上早些去</li>
+      <li>新护照约 7 个工作日到手</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <!-- 七、在职福利别浪费 -->
+    <div class="chapter c-teal" id="ch7">
+      <h3><span class="ch-num n7">1.7</span>在职福利别浪费</h3>
+      <div class="ch-desc">这些免费资源，离职后就没有了</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">&#129657; 免费体检</div>
+      <p>大厂每年给员工和父母提供免费体检。<strong>最好提前预约</strong>，万一查出问题需要去医院复查，还可以用商保报销。体检报告保存电子版，将来办签证或健康管理会用到。</p>
+    </div>
+    <div class="card">
+      <div class="card-title">&#128218; 内部课程学习</div>
+      <p>有空闲时间可以在公司内部平台多报一些课程。学习平台上的<strong>行业研究报告</strong>非常有价值，可以扩大视野、吸收信息，对职业转型也会有帮助。离职后这些资源就访问不到了。</p>
+    </div>
+    <div class="card">
+      <div class="card-title">&#127941; 高层次人才认定</div>
+      <p>有效期2年。材料送完还需等 <strong>30个工作日</strong>以上。可在内网搜索：「杭州市高层次人才分类认定及备案攻略」。</p>
+    </div>
+    <div class="card">
+      <div class="card-title">&#128188; 副高级职称</div>
+      <p>如果后续收入不到E类人才的 50W 要求，可以利用<strong>副高级职称 + 成果</strong>评定E类人才。副高级职称可以通过<strong>软考</strong>获得，软考相对门槛较低。</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ========================================== -->
+    <!-- 第二部分：离职前两周 -->
+    <!-- ========================================== -->
+    <div class="section-header" id="sec2">
+      <div class="num p2">二</div>
+      <div>
+        <h2>离职前两周 · 提前准备</h2>
+        <div class="subtitle">最后1-2周，做好交接和备份</div>
+      </div>
+    </div>
+
+    <!-- 八、注册个人钉 -->
+    <div class="chapter c-orange" id="ch8">
+      <h3><span class="ch-num n8">2.1</span>注册个人钉 · 加好群再走</h3>
+      <div class="ch-desc">阿里钉离职后自动注销，提前注册个人钉</div>
+    </div>
+
+    <p><strong>阿里钉离职后自动注销</strong>，所有钉钉群、文件、联系人都会消失。提前注册个人钉，加好重要组织，是离职前最基础的一步。</p>
+
+    <div class="subsection">推荐加入的社群</div>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>群名</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><td><strong>阿里人·一起提前退休</strong></td><td>生活、旅行、投资、股票、买房、买车，3000+ 人</td></tr>
+          <tr><td>A股交流群</td><td>分享 A 股股票购买心得</td></tr>
+          <tr><td>AI 交流群</td><td>分享 AI 资讯、知识热点、AI 工具相关内容</td></tr>
+          <tr><td>旅行交流群</td><td>日本/欧洲/新西兰/云南，1400+ 人</td></tr>
+          <tr><td>二手闲置信息</td><td>2400+ 人</td></tr>
+          <tr><td>阿里蚂蚁租房</td><td>800+ 人，实习生也可申请</td></tr>
+          <tr><td>房产信息交流群</td><td>申请后轮替入群</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tip-box warn">
+      <span class="tip-icon">&#9888;&#65039;</span><strong>注意：</strong>阿里钉占用手机号的话，先保存群码，离职后重新注册个人钉再扫码加入。
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 九、重要文件和信息备份 -->
+    <div class="chapter c-blue" id="ch9">
+      <h3><span class="ch-num n9">2.2</span>重要文件和信息备份</h3>
+      <div class="ch-desc">将来找工作、贷款、签证都会用到</div>
+    </div>
+
+    <div class="tip-box info">
+      <span class="tip-icon">&#128161;</span><strong>Ihome 贷款</strong>：需要在<strong>离职后1个月内还清</strong>，公司会从离职补偿款里扣除。如果暂时没有资金周转，可以用之前办好的信用贷额度还清，再慢慢还信贷。
+    </div>
+
+    <ul class="checklist">
+      <li><strong>在职证明、收入证明</strong>：多留几份原件，能开中英文的尽量中英文都开</li>
+      <li><strong>历年体检报告</strong>：可直接下载，或拨打阿里巴巴员工热线 &#128222; <strong>4006551818</strong></li>
+      <li><strong>股权记录、薪资历史、四金总数</strong>：留底，证明过去的赚钱能力</li>
+      <li><strong>中银国际账户信息</strong>：账号、密码、绑定手机——忘了离职后找回很麻烦</li>
+      <li><strong>欢行「欢豆」兑换</strong>：106欢豆=100元话费（每月限400元）</li>
+      <li><strong>官方文档「离职温馨提示」</strong>：离职系统底部可下载</li>
+      <li><strong>专利证明</strong>：有授权专利的要开具证明</li>
+      <li><strong>商业保险理赔资料</strong>：提前整理病例和发票进行保险报销</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <!-- 十、个人信息清理 -->
+    <div class="chapter c-green" id="ch10">
+      <h3><span class="ch-num n10">2.3</span>个人信息清理</h3>
+      <div class="ch-desc">有些信息不清理，离职后会「被动暴露」</div>
+    </div>
+
+    <ul>
+      <li><strong>钉钉盘「我的文件」</strong> → 必须删除，否则自动转交给上级</li>
+      <li><strong>告警系统手机号</strong> → 改掉或全局取消订阅，否则离职后还会收到DING</li>
+      <li><strong>MyHR紧急联系人信息</strong> → 删除身份证等敏感内容，或将联系人改成「自我」</li>
+      <li><strong>家庭成员信息</strong> → 先备份体检报告，再删成员信息（删除会级联删除）</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <!-- ========================================== -->
+    <!-- 第三部分：离职当天 -->
+    <!-- ========================================== -->
+    <div class="section-header" id="sec3">
+      <div class="num p3">三</div>
+      <div>
+        <h2>离职当天</h2>
+        <div class="subtitle">资产归还、改名、离职证明，一站式搞定</div>
+      </div>
+    </div>
+
+    <div class="chapter c-purple" id="ch11">
+      <h3><span class="ch-num n11">3.1</span>离职当天全流程</h3>
+      <div class="ch-desc">最简洁方案：资产归还 ✓，工牌挂失 ✓，等24点收离职证明，走人</div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">&#128187; IT 资产归还</div>
+      <ul>
+        <li>查询资产：<a href="https://asset.alibaba-inc.com/workflow/myassets/index" class="ref-link">asset.alibaba-inc.com</a></li>
+        <li><strong>「资产」和「配件」都要归还</strong>，别漏掉</li>
+        <li>个人电脑自购流程：<strong>至少离职当天上午开始处理</strong>，格式化约需 4 小时</li>
+        <li>自购电脑想转卖：可入内部闲置群（2000+ 人），或直接挂闲鱼</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title">&#128221; 钉钉改名</div>
+      <p>钉钉增加了名称审核，写微信号或 VX 会被拦截标注「违规」。建议发挥创意，比如「花名 + 手机号」，让老朋友在你注销后还能找到你。</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">&#127970; 工牌处理</div>
+      <ul>
+        <li><strong>官方流程</strong>：工牌按规定需归还</li>
+        <li><strong>民间流程</strong>：如想留作纪念，可提前在钉钉「工牌」→「挂失」操作</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title">&#128663; 停车位退款</div>
+      <p>离职前在<strong>阿里停车</strong>后台申请退费。一旦离职，车位自动回收，费用无法追回。</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">&#128196; 离职证明</div>
+      <ul>
+        <li>开具离职证明 = 内网权限 + 阿里钉 同步关闭</li>
+        <li>不急的话，等 lastday 24点后自动触发即可</li>
+        <li>证明为电子版（法律效力同纸质），发送到你在协议中填写的私人邮箱</li>
+      </ul>
+    </div>
+
+    <div class="tip-box success">
+      <span class="tip-icon">&#9989;</span><strong>最简洁方案：</strong>资产归还 ✓ → 工牌挂失 ✓ → 等 lastday 过了 24 点 → 收离职证明 → 走人
+    </div>
+
+    <div class="subsection">工牌保留福利</div>
+    <p>市面上不少商家愿意对大厂员工提供专属折扣，很多时候需要验证工牌才能享受：</p>
+    <ul>
+      <li>乐高 5 折起内购（长期）</li>
+      <li>苹果产品企业内购（长期）</li>
+      <li>lululemon 75 折内购券（偶尔）</li>
+      <li>安德玛 6 折内购（2次/年）</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <!-- ========================================== -->
+    <!-- 第四部分：离职后的财务账 -->
+    <!-- ========================================== -->
+    <div class="section-header" id="sec4">
+      <div class="num p4">四</div>
+      <div>
+        <h2>离职后的财务账</h2>
+        <div class="subtitle">工资结算、社保公积金、保险、补贴</div>
+      </div>
+    </div>
+
+    <div class="chapter c-orange" id="ch12">
+      <h3><span class="ch-num n12">4.1</span>离职工资</h3>
+    </div>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>情况</th><th>工资发放时间</th></tr></thead>
+        <tbody>
+          <tr><td>25日<strong>前</strong>（含25日）完成交接</td><td>离职当月最后工作日发放</td></tr>
+          <tr><td>25日<strong>后</strong>完成交接</td><td>次月最后工作日发放</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip-box warn">
+      <span class="tip-icon">&#9888;&#65039;</span>农历春节所属月份可能略做调整，公司不会另行通知，自行关注。
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="chapter c-blue" id="ch13">
+      <h3><span class="ch-num n13">4.2</span>五险一金怎么办</h3>
+    </div>
+
+    <div class="subsection">社保</div>
+    <ul>
+      <li>离职当月正常缴纳，次月 10 日左右公司操作停缴</li>
+      <li>部分城市：如离职时间晚于减员截止日，次月可能产生部分费用</li>
+    </ul>
+
+    <p><strong>离职后如何继续缴纳社保？</strong></p>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>方式</th><th>操作</th></tr></thead>
+        <tbody>
+          <tr><td>支付宝自缴</td><td>支付宝搜「灵活就业人员参保登记」</td></tr>
+          <tr><td>挂靠朋友公司</td><td>自费，可在招号 APP 设置每月自动转账</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip-box info">
+      <span class="tip-icon">&#128161;</span>社保一般 15 号缴纳，公司停缴后，记得在下一个 15 号前自己衔接上。
+    </div>
+
+    <div class="subsection">失业保险金</div>
+    <p>如果短期内不准备找工作，可在支付宝搜「<strong>失业保险金申领</strong>」，每月能领一些零花钱，符合条件的话不要浪费。</p>
+
+    <div class="subsection">公积金</div>
+    <p>离职后无法直接提取，满足以下条件之一才可提取：</p>
+    <ul>
+      <li>本市户口，与单位终止劳动关系后，未重新就业满 <strong>5 年</strong></li>
+      <li>非本市户籍，封存账户满 <strong>半年</strong> 后可申请</li>
+      <li>完全或部分丧失劳动能力，且与单位终止劳动关系</li>
+      <li>有新购房合同，可按购房提取</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <div class="chapter c-green" id="ch14">
+      <h3><span class="ch-num n14">4.3</span>商业保险 & 人事档案</h3>
+    </div>
+
+    <p>个人自费部分，离职后仍然有效。<strong>提前做两件事</strong>：① 下载保单存档；② 保存保险公司对接人电话。</p>
+
+    <p>公司帮买的保险取消后，自己还需要补充一些基础保障：</p>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>保险类型</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td><strong>百万医疗险</strong></td><td>报销大额医疗费用，必备</td></tr>
+          <tr><td><strong>重疾险</strong></td><td>确诊重大疾病直接赔付，一次性给钱</td></tr>
+          <tr><td><strong>意外险</strong></td><td>花钱不多但必备，应对意外伤害</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="subsection">人事档案</div>
+    <p>公司不保管个人档案，档案通常存放在对应的人才市场。签约「淘宝（中国）软件有限公司」的同学，档案管理机构：<strong>杭州市余杭区人才管理服务中心</strong>，电话：<strong>0571-89391153</strong></p>
+
+    <div class="divider"></div>
+
+    <div class="chapter c-purple" id="ch15">
+      <h3><span class="ch-num n15">4.4</span>职业技能补贴申请</h3>
+    </div>
+
+    <p>离职前还可以考一些技能证书，部分可以领取政府补贴：</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>证书</th><th>补贴</th><th>发证机构</th><th>适合人群</th></tr></thead>
+        <tbody>
+          <tr><td><strong>人工智能训练师</strong> <span class="tag tag-hot">&#11088;</span></td><td>1200元 + 余杭额外2000元</td><td>浙江工商大学</td><td>对 AI 感兴趣</td></tr>
+          <tr><td>职业指导师/培训师</td><td>3级 + 余杭2000元</td><td>浙江财经大学</td><td>HR/培训方向</td></tr>
+          <tr><td>婚姻家庭指导师</td><td>3级 + 余杭2000元</td><td>—</td><td>心理咨询方向</td></tr>
+          <tr><td>企业人力关系管理师</td><td>3级 + 余杭2000元</td><td>浙江财经大学</td><td>HR/管理者</td></tr>
+          <tr><td>劳动关系协调员</td><td>3级 + 余杭2000元</td><td>—</td><td>权益维护方向</td></tr>
+          <tr><td>公共营养师/健康管理师</td><td>3级 + 余杭2000元</td><td>浙江中医药大学</td><td>健康领域</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tip-box info">
+      <span class="tip-icon">&#128218;</span>以上证书都是人社部背书给编码，全国通用，OSTA网可查，考前有精准小题库，平均通过率 90%。
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ========================================== -->
+    <!-- 第五部分：被裁了 -->
+    <!-- ========================================== -->
+    <div class="section-header" id="sec5">
+      <div class="num p5">五</div>
+      <div>
+        <h2>被裁了，怎么应对</h2>
+        <div class="subtitle">先深呼吸。你的权利，得自己主张</div>
+      </div>
+    </div>
+
+    <div class="chapter c-red" id="ch16">
+      <h3><span class="ch-num n16">5.1</span>协议离职 · 被裁了怎么应对</h3>
+    </div>
+
+    <div class="subsection">一般补偿规则</div>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>情形</th><th>补偿标准</th><th>备注</th></tr></thead>
+        <tbody>
+          <tr><td>业务裁撤（有公司出具文件）</td><td class="highlight">N+1</td><td>公司不可更改描述</td></tr>
+          <tr><td>岗位缩减（岗位还在，精简人员）</td><td class="highlight">2N</td><td>需走仲裁申请</td></tr>
+          <tr><td>员工要求继续履行合同</td><td>难</td><td>诉讼胜可获 2N</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tip-box info">
+      <span class="tip-icon">&#128200;</span><strong>实际情况：</strong>公司方案以 N+1 到 N+3 为主，有人谈到 N+6，能谈多少靠实力和时机。
+    </div>
+
+    <div class="subsection">哪些人公司不得单方解除合同</div>
+    <div class="tip-box danger">
+      <span class="tip-icon">&#128737;&#65039;</span><strong>「老、弱、病、残、孕、职伤、医疗期、15年+临退」</strong><br>
+      公司不得单方裁员，必须协商或依法留用，否则涉及 <strong>2N 赔偿</strong>
+    </div>
+
+    <div class="subsection">如遇不公正待遇</div>
+    <div class="tip-box danger">
+      <span class="tip-icon">&#128680;</span><strong>第一原则：请勿签任何字！！！</strong><br>
+      HR 也有自己的 KPI，不要指望他站在你这边说真话。大家各守其位，理性应对。
+    </div>
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <strong>咨询劳动仲裁律师</strong>（这是你的基本权利）<br>
+        自行联系律师 / 小红书搜攻略 / 问办过的同学<br>
+        浙江之江律师事务所 · 徐律师：13588430581
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <strong>申请劳动仲裁</strong>（免费）<br>
+        西溪园区同学主要看余杭区仲裁委。需提供证明：劳动合同约定工作地点 / 打卡记录 / 工作照 / 与管理层聊天记录
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <strong>与 HR 协商争取</strong><br>
+        申请转岗机会 / 增加报价，有同学争取到 N+6
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ========================================== -->
+    <!-- 第六部分：收尾 -->
+    <!-- ========================================== -->
+    <div class="section-header" id="sec6">
+      <div class="num p6">六</div>
+      <div>
+        <h2>收尾</h2>
+        <div class="subtitle">假期折算、文件转移、好好告别</div>
+      </div>
+    </div>
+
+    <div class="chapter c-teal" id="ch17">
+      <h3><span class="ch-num n17">6.1</span>假期折算</h3>
+    </div>
+    <ul>
+      <li><strong>查休假时间</strong>：看离职系统，不要看请假系统（两者算法不同）</li>
+      <li><strong>年假计算公式</strong>：本年度服务天数 ÷ 365</li>
+      <li>年休假以入职日期算 365 天；陪伴假以自然年（1月-12月）算</li>
+      <li>某类休假出现负数 → 可在休假系统修改前半年内的假条类型，<strong>仅限改1次</strong></li>
+      <li>未用完假期是否折现：按公司政策；负数假期会扣钱</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <div class="chapter c-pink" id="ch18">
+      <h3><span class="ch-num n18">6.2</span>个人文件转移注意事项</h3>
+    </div>
+
+    <div class="tip-box warn">
+      <span class="tip-icon">&#9888;&#65039;</span><strong>别到最后一天才想起这件事。</strong>
+    </div>
+
+    <div class="subsection">提前阅读的规范文档</div>
+    <ul>
+      <li>《待离职期间需要注意的安全事项》</li>
+      <li>《移动存储拷贝文件申请方式介绍》</li>
+    </ul>
+    <p>建议提前看，避免误触数据安全红线。</p>
+
+    <div class="subsection">风控会在这个时候升级</div>
+    <p>离职系统一旦启动（约谈签协议后约 1 小时，HR 触发），从阿里钉向个人钉发文件就<strong>全部进入数据审批流程</strong>。</p>
+    <ul>
+      <li>传输的文件夹不能嵌套，不然发不出去</li>
+      <li>会触发数据安全风险调查，主管收到通知</li>
+      <li>还要线下签承诺书，自找麻烦</li>
+    </ul>
+
+    <div class="tip-box danger">
+      <span class="tip-icon">&#128680;</span><strong>结论：要转移个人文件，请在离职系统启动前提前处理完。</strong>
+    </div>
+
+    <div class="subsection">晋升文档</div>
+    <p style="color:#888;font-style:italic;">不用带，带了也没用，过期的，而且离职系统能看到你的文件操作记录。不要铤而走险。</p>
+    <p style="color:#aaa;font-size:13px;text-align:right;">—— 转自飞猪某同学离职 Checklist</p>
+
+    <div class="divider"></div>
+
+    <!-- ========== ENDING ========== -->
+    <div class="ending">
+      <div class="big">你在阿里工作的这些年，<br>值得一个体面的结尾。</div>
+      <p>把该拿的拿到，该保留的保留，<br>然后轻装出发。</p>
+      <div class="bye">祝一切顺利 &#127807;</div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <div class="footer">
+      <div class="footer-text">需要帮助时，可以拨打以下电话</div>
+      <div class="footer-contacts">
+        <div class="footer-contact">
+          <strong>&#128222; 员工服务热线</strong>
+          4006551818
+        </div>
+        <div class="footer-contact">
+          <strong>&#127970; 公积金咨询</strong>
+          0571-12345
+        </div>
+        <div class="footer-contact">
+          <strong>&#128193; 余杭区档案</strong>
+          0571-89391153
+        </div>
+        <div class="footer-contact">
+          <strong>&#9878;&#65039; 劳务纠纷律师</strong>
+          徐律师 13588430581
+        </div>
+      </div>
+      <div style="margin-top:30px;font-size:12px;color:rgba(255,255,255,0.3);">
+        阿里人·一起提前退休 | 持续更新中
+      </div>
+    </div>
+
+  </div><!-- .content -->
+</div><!-- .article-wrapper -->
+<script>
+document.querySelectorAll('.nav-tag').forEach(function(tag) {
+  tag.addEventListener('click', function(e) {
+    e.preventDefault();
+    var targetId = this.getAttribute('href').replace('#', '');
+    var target = document.getElementById(targetId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // add highlight flash
+      target.classList.remove('highlight-flash');
+      void target.offsetWidth; // trigger reflow
+      target.classList.add('highlight-flash');
+    }
+  });
+});
+</script>
+</body>
+</html>
